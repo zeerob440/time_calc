@@ -153,11 +153,12 @@ if rehrs >= 6:
     fri_l = .50
     # work until this time on Friday if >= 6 hours remain
     worktil = decamil((friin + rehrs + fri_l)) 
-
-    print(worktil)
+    #round
+    print('%.2f' % worktil)
     # otherwise work until this time
 elif rehrs <= 6:
     worktil = decamil((friin + rehrs))
-    print(worktil)
+    #round
+    print('%.2f' % worktil)
 
 
