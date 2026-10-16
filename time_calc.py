@@ -1,14 +1,56 @@
-# a weekly time calculator designed to run on desktop or a CASIO FXCG50 calculator.
+# a weekly time calculator designed to run on desktop or a Casio FXCG50 calculator.
+
+# converts military time to decimal time
+def miladec(time):
+    time = (time // 100) + (time % 100) / 60
+    return time
+
+# decrement -= .50 time for days worked >= 6 hours
+def lunch(mthirty):
+    mthirty -= .50
+    return mthirty
 
 while True:
     try:
+        # input times in military time
+        # input -1 for 0 hours worked
+        # -2 for 8 hrs PTO
 
-        sunin = input('SUN TIMEIN ')
-        sunin = float(sunin)
-        sunout = input('SUN TIMEOUT ')
-        sunout = float(sunout)
-        # sunday total hours
-        suntot = sunout - sunin
+        # Sunday
+        while True:
+            sunin = input('SUN TIMEIN ')
+            sunin = float(sunin)
+            if sunin == -1:
+                suntot = 0
+            if sunin == -2:
+                suntot = 8.0
+                break
+            
+            sunout = input('SUN TIMEOUT ')
+            sunout = float(sunout)
+            # sunday total hours
+            suntot = miladec(sunout) - miladec(sunin)
+            if suntot >= 6:
+                suntot = lunch(suntot)
+            break
+
+        #Monday
+        while True:
+            monin = input('MON TIMEIN ')
+            monin = float(monin)
+            if monin == -1:
+                montot = 0
+            if monin == -2:
+                montot = 8.0
+                break
+                    
+            monout = input('SUN TIMEOUT ')
+            monout = float(monout)
+            # sunday total hours
+            montot = miladec(monout) - miladec(monin)
+            if suntot >= 6:
+                    montot = lunch(montot)
+                    break
 
         monin = input('MON TIMEIN ')
         monin = float(monin) 
@@ -28,12 +70,12 @@ while True:
         # if tuetot >= 6 subtract half hour for lunch
         # replace with function for optimization.
         if tuetot >= 6:
-            tuetot = tuetot - 30
+            tuetot = tuetot - .50
 
         wedin = input('WED TIMEIN ')
         wedin = float(wedin)
         wedout = input('WED TIMEOUT ')
-        wedout = float(wendout)
+        wedout = float(wedout)
         # total hours wed
         wedtot = wedout - wedin
 
@@ -53,7 +95,7 @@ while True:
        print('INCORRECT CODE!')
        continue
 
-# monday - thursdat total worked hours 
+# monday - thursday total worked hours 
 m_fhrs = suntot + montot + tuetot + wedtot + thrtot 
 
 # remaining hours to wor for the week
