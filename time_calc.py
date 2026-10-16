@@ -114,6 +114,7 @@ while True:
 
         friin = input('FRI TIMEIN ')
         friin = float(friin)
+        friin = miladec(friin)
 
         break
     
