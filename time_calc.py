@@ -10,6 +10,12 @@ def lunch(mthirty):
     mthirty -= .50
     return mthirty
 
+# convert decimal military time to standard military time
+def decamil(time):
+    hours = int(time)
+    minutes = (time % 1) * 60
+    return hours * 100 + minutes
+
 while True:
     try:
         # input times in military time
@@ -132,8 +138,8 @@ rehrs = 40 - m_fhrs
 #print check
 print('hours rmain', rehrs)
 
-# work until this time on friday.
-worktil = friin + rehrs
+# work until this time on Friday.
+worktil = decamil((friin + rehrs)) 
 
 print(worktil)
 
