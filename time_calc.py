@@ -67,7 +67,7 @@ while True:
                             
             tueout = input('TUE TIMEOUT ')
             tueout = float(tueout)
-            # sunday total hours
+            # Tuesday total hours
             tuetot = miladec(tueout) - miladec(tuein)
             if tuetot >= 6:
                 tuetot = lunch(tuetot)
@@ -75,23 +75,42 @@ while True:
         
 
         # Wednesday
+        while True:
+            wedin = input('WED TIMEIN ')
+            wedin = float(wedin)
+            if wedin == -1:
+                wedtot = 0
+                break
+            if wedin == -2:
+                wedtot = 8.0
+                break
+                                    
+            wedout = input('WED TIMEOUT ')
+            wedout = float(wedout)
+            # Wednesday total hours
+            wedtot = miladec(wedout) - miladec(wedin)
+            if wedtot >= 6:
+                wedtot = lunch(wedtot)
+            break
 
-
-
-
-        wedin = input('WED TIMEIN ')
-        wedin = float(wedin)
-        wedout = input('WED TIMEOUT ')
-        wedout = float(wedout)
-        # total hours wed
-        wedtot = wedout - wedin
-
-        thrin = input('THR TIMEIN ')
-        thurin = float(thurin)
-        throut = input('THR TIMEOUT ')
-        throut = float(throut)
-        # total hours Thrusday
-        thrtot = throut - thurin
+        # Thursday
+        while True:
+            thrin = input('THR TIMEIN ')
+            thrin = float(thrin)
+            if thrin == -1:
+                thrtot = 0
+                break
+            if thrin == -2:
+                thrtot = 8.0
+                break
+                                            
+            throut = input('THR TIMEOUT ')
+            throut = float(throut)
+                # Wednesday total hours
+            wedtot = miladec(throut) - miladec(thrin)
+            if wedtot >= 6:
+                    thrtot = lunch(thrtot)
+            break
 
         friin = input('FRI TIMEIN ')
         friin = float(friin)
@@ -103,15 +122,17 @@ while True:
        continue
 
 # monday - thursday total worked hours 
-m_fhrs = suntot + montot + tuetot + wedtot + thrtot 
+m_fhrs = suntot + montot + tuetot + wedtot + thrtot
+# print check for test
+print('hours so far', m_fhrs) 
 
 # remaining hours to wor for the week
 rehrs = 40 - m_fhrs
+#print check
+print('hours rmain', rehrs)
 
 # work until this time on friday.
 worktil = friin + rehrs
 
 print(worktil)
-
-
 
