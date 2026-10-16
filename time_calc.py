@@ -1,4 +1,15 @@
-# a weekly time calculator designed to run on desktop or a Casio FXCG50 calculator.
+'''
+VERSION: Alpha 0, A weekly day shift time card calculator designed to run on desktop or a Casio fx-CG50 calculator.
+time_calc.py simplifies an annoying task I have to complete once a week. 
+
+FEATURES: time_calc can run on desktop or a Casio fx-CG50 calculator
+
+REQs: Python 3.13 OR MicroPython 1.9.4| Casio fx-CG50| Desktop computer
+
+Proudly Engineered by Zachary Roberts 15 OCT 2026
+
+"A watched clock never ticks."
+'''
 
 # converts military time to decimal time
 def miladec(time):
@@ -140,10 +151,11 @@ print('hours rmain', rehrs)
 
 if rehrs >= 6:
     fri_l = .50
-    # work until this time on Friday.
+    # work until this time on Friday if >= 6 hours remain
     worktil = decamil((friin + rehrs + fri_l)) 
 
     print(worktil)
+    # otherwise work until this time
 elif rehrs <= 6:
     worktil = decamil((friin + rehrs))
     print(worktil)
