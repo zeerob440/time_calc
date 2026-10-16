@@ -22,6 +22,7 @@ while True:
             sunin = float(sunin)
             if sunin == -1:
                 suntot = 0
+                break
             if sunin == -2:
                 suntot = 8.0
                 break
@@ -34,43 +35,47 @@ while True:
                 suntot = lunch(suntot)
             break
 
-        #Monday
+        # Monday
         while True:
             monin = input('MON TIMEIN ')
             monin = float(monin)
             if monin == -1:
                 montot = 0
+                break
             if monin == -2:
                 montot = 8.0
                 break
                     
-            monout = input('SUN TIMEOUT ')
+            monout = input('MON TIMEOUT ')
             monout = float(monout)
             # sunday total hours
             montot = miladec(monout) - miladec(monin)
-            if suntot >= 6:
+            if montot >= 6:
                     montot = lunch(montot)
-                    break
+            break
 
-        monin = input('MON TIMEIN ')
-        monin = float(monin) 
-        monout = input('MON TIMEOUT ')
-        monout = float(monout)
-        # mon hours total
-        montot = monout - monin
+        # Tuesday
+        while True:
+            tuein = input('TUE TIMEIN ')
+            tuein = float(tuein)
+            if tuein == -1:
+                tuetot = 0
+                break
+            if tuein == -2:
+                tuetot = 8.0
+                break
+                            
+            tueout = input('TUE TIMEOUT ')
+            tueout = float(tueout)
+            # sunday total hours
+            tuetot = miladec(tueout) - miladec(tuein)
+            if tuetot >= 6:
+                tuetot = lunch(tuetot)
+            break
+        
 
-
-        tuein = input('TUE TIMEIN ')
-        tuein = float(tuein)
-        tueout = input('TUE TIMEOUT ')
-        tueout = float(tueout)
-        # tue hours total
-        tuetot = tueout - tuein
-
-        # if tuetot >= 6 subtract half hour for lunch
-        # replace with function for optimization.
-        if tuetot >= 6:
-            tuetot = tuetot - .50
+        # Wednesday
+        
 
         wedin = input('WED TIMEIN ')
         wedin = float(wedin)
