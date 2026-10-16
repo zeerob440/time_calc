@@ -133,13 +133,19 @@ m_fhrs = suntot + montot + tuetot + wedtot + thrtot
 # print check for test
 print('hours so far', m_fhrs) 
 
-# remaining hours to wor for the week
+# remaining hours to work for the week
 rehrs = 40 - m_fhrs
 #print check
 print('hours rmain', rehrs)
 
-# work until this time on Friday.
-worktil = decamil((friin + rehrs)) 
+if rehrs >= 6:
+    fri_l = .50
+    # work until this time on Friday.
+    worktil = decamil((friin + rehrs + fri_l)) 
 
-print(worktil)
+    print(worktil)
+elif rehrs <= 6:
+    worktil = decamil((friin + rehrs))
+    print(worktil)
+
 
