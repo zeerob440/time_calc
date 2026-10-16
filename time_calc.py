@@ -107,8 +107,8 @@ while True:
             throut = input('THR TIMEOUT ')
             throut = float(throut)
                 # Wednesday total hours
-            wedtot = miladec(throut) - miladec(thrin)
-            if wedtot >= 6:
+            thrtot = miladec(throut) - miladec(thrin)
+            if thrtot >= 6:
                     thrtot = lunch(thrtot)
             break
 
