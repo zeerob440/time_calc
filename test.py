@@ -1,6 +1,6 @@
 from time_calc import lunch, miladec
-
-while True:
+def rundis():
+    while True:
             sunin = input('SUN TIMEIN ')
             sunin = float(sunin)
             if sunin == -1:
@@ -17,4 +17,7 @@ while True:
             if suntot >= 6:
                 suntot = lunch(suntot)
             break
-print(suntot)
+    print(suntot)
+
+if __name__ == '__main__':
+     rundis()

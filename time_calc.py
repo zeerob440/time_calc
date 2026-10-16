@@ -75,7 +75,9 @@ while True:
         
 
         # Wednesday
-        
+
+
+
 
         wedin = input('WED TIMEIN ')
         wedin = float(wedin)
