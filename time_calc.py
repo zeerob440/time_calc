@@ -38,7 +38,7 @@ while True:
         while True:
             sunin = input('SUN TIMEIN ')
             # input validation: 4 chars or sentinel only
-            if len(sunin) != 4 and sunin not in (-1, -2):
+            if len(sunin) != 4 and sunin not in ('-1', '-2'):
                 raise ValueError
             sunin = float(sunin)
             if sunin == -1:
@@ -62,7 +62,7 @@ while True:
         while True:
             monin = input('MON TIMEIN ')
             # input validation: 4 chars or sentinel only
-            if len(monin) != 4 and monin not in (-1, -2):
+            if len(monin) != 4 and monin not in ('-1', '-2'):
                 raise ValueError
             monin = float(monin)
             if monin == -1:
@@ -86,7 +86,7 @@ while True:
         while True:
             tuein = input('TUE TIMEIN ')
             # input validation: 4 chars or sentinel only
-            if len(tuein) != 4 and tuein not in (-1, -2):
+            if len(tuein) != 4 and tuein not in ('-1', '-2'):
                 raise ValueError
             tuein = float(tuein)
             if tuein == -1:
@@ -111,7 +111,7 @@ while True:
         while True:
             wedin = input('WED TIMEIN ')
             # input validation: 4 chars or sentinel only 
-            if len(wedin) != 4 and wedin not in(-1, -2):
+            if len(wedin) != 4 and wedin not in('-1', '-2'):
                 raise ValueError
             wedin = float(wedin)
             if wedin == -1:
@@ -135,7 +135,7 @@ while True:
         while True:
             thrin = input('THR TIMEIN ')
             # input validation: 4 chars or sentinel only
-            if len(thrin) != 4 and thrin not in (-1, -2):
+            if len(thrin) != 4 and thrin not in ('-1', '-2'):
                 raise ValueError
             thrin = float(thrin)
             if thrin == -1:
