@@ -50,15 +50,20 @@ while True:
             sunin = float(sunin)
             if sunin == -1:
                 suntot = 0
+                sunout = 2400
                 break
             if sunin == -2:
                 suntot = 8.0
+                sunout = 2400
                 break
             
             sunout = input('SUN TIMEOUT ')
             if len(sunout) != 4:
                 raise ValueError
             sunout = float(sunout)
+            # no overnight exception
+            if sunout <= sunin:
+                raise ValueError
             # sunday total hours
             suntot = miladec(sunout) - miladec(sunin)
             if suntot >= 6:
@@ -74,16 +79,23 @@ while True:
             monin = float(monin)
             if monin == -1:
                 montot = 0
+                # ensures out var are greater than in vars
+                monout = 2400
                 break
             if monin == -2:
                 montot = 8.0
+                # ensures out var are greater than in vars
+                monout = 2400
                 break
                     
             monout = input('MON TIMEOUT ')
             if len(monout) != 4:
                 raise ValueError
             monout = float(monout)
-            # sunday total hours
+            # no overnight exception
+            if monout <= monin:
+                raise ValueError
+            # monday total hours
             montot = miladec(monout) - miladec(monin)
             if montot >= 6:
                     montot = lunch(montot)
@@ -98,22 +110,28 @@ while True:
             tuein = float(tuein)
             if tuein == -1:
                 tuetot = 0
+                # ensures out var are greater than in vars
+                tueout = 2400
                 break
             if tuein == -2:
                 tuetot = 8.0
+                # ensures out var are greater than in vars
+                tueout = 2400
                 break
                             
             tueout = input('TUE TIMEOUT ')
             if len(tueout) != 4:
                 raise ValueError
             tueout = float(tueout)
+            # no overnight exception
+            if tueout <= tuein:
+                raise ValueError
             # Tuesday total hours
             tuetot = miladec(tueout) - miladec(tuein)
             if tuetot >= 6:
                 tuetot = lunch(tuetot)
             break
         
-
         # Wednesday
         while True:
             wedin = input('WED TIMEIN ')
@@ -123,15 +141,22 @@ while True:
             wedin = float(wedin)
             if wedin == -1:
                 wedtot = 0
+                # ensures out var are greater than in vars
+                wedout = 2400
                 break
             if wedin == -2:
                 wedtot = 8.0
+                # ensures out var are greater than in vars
+                wedout = 2400
                 break
                                     
             wedout = input('WED TIMEOUT ')
             if len(wedout) != 4:
                 raise ValueError
             wedout = float(wedout)
+            # no overnight exception
+            if wedout <= wedin:
+                raise ValueError
             # Wednesday total hours
             wedtot = miladec(wedout) - miladec(wedin)
             if wedtot >= 6:
@@ -147,16 +172,23 @@ while True:
             thrin = float(thrin)
             if thrin == -1:
                 thrtot = 0
+                # ensures out var are greater than in vars
+                throut = 2400
                 break
             if thrin == -2:
                 thrtot = 8.0
+                # ensures out var are greater than in vars
+                throut = 2400
                 break
                                             
             throut = input('THR TIMEOUT ')
             if len(throut) != 4:
                 raise ValueError
             throut = float(throut)
-                # Wednesday total hours
+            # no overnight exception
+            if throut <= thrin:
+                raise ValueError
+                # thurssday total hours
             thrtot = miladec(throut) - miladec(thrin)
             if thrtot >= 6:
                     thrtot = lunch(thrtot)
