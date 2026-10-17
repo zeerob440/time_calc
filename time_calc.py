@@ -178,7 +178,7 @@ m_fhrs = suntot + montot + tuetot + wedtot + thrtot
 # remaining hours to work for the week
 rehrs = 40 - m_fhrs
 #print check
-print('HRS REMAIN ', rehrs)
+print('HRS REMAIN %.2f' % rehrs)
 
 if rehrs >= 6:
     fri_l = .50
