@@ -187,8 +187,8 @@ if rehrs >= 6:
 elif rehrs <= 6:
     worktil = decamil((friin + rehrs))
     # convert to int for std military time readability
-    worktil = int('CLOCKOUT ', worktil)
-    print(worktil)
+    worktil = int(worktil)
+    print('CLOCKOUT ',worktil)
     
 
 
