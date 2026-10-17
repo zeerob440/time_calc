@@ -27,7 +27,7 @@ def decamil(time):
     minutes = (time % 1) * 60
     return hours * 100 + minutes
 
-
+# FIXME: assert disallows -1 -2 sentinels rewrite raising a ValueError
 while True:
     try:
         # input times in military time
