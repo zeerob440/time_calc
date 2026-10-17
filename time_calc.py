@@ -27,7 +27,7 @@ def decamil(time):
     minutes = (time % 1) * 60
     return hours * 100 + minutes
 
-# FIXME: assert disallows -1 -2 sentinels rewrite raising a ValueError
+
 while True:
     try:
         # input times in military time
@@ -37,7 +37,9 @@ while True:
         # Sunday
         while True:
             sunin = input('SUN TIMEIN ')
-            assert len(sunin) == 4
+            # input validation: 4 chars or sentinel only
+            if len(sunin) != 4 and sunin not in (-1, -2):
+                raise ValueError
             sunin = float(sunin)
             if sunin == -1:
                 suntot = 0
@@ -47,7 +49,8 @@ while True:
                 break
             
             sunout = input('SUN TIMEOUT ')
-            assert len(sunout) == 4
+            if len(sunout) != 4:
+                raise ValueError
             sunout = float(sunout)
             # sunday total hours
             suntot = miladec(sunout) - miladec(sunin)
@@ -58,7 +61,9 @@ while True:
         # Monday
         while True:
             monin = input('MON TIMEIN ')
-            assert len(monin) == 4
+            # input validation: 4 chars or sentinel only
+            if len(monin) != 4 and monin not in (-1, -2):
+                raise ValueError
             monin = float(monin)
             if monin == -1:
                 montot = 0
@@ -68,7 +73,8 @@ while True:
                 break
                     
             monout = input('MON TIMEOUT ')
-            assert len(monout) == 4
+            if len(monout) != 4:
+                raise ValueError
             monout = float(monout)
             # sunday total hours
             montot = miladec(monout) - miladec(monin)
@@ -79,7 +85,9 @@ while True:
         # Tuesday
         while True:
             tuein = input('TUE TIMEIN ')
-            assert len(tuein) == 4
+            # input validation: 4 chars or sentinel only
+            if len(tuein) != 4 and tuein not in (-1, -2):
+                raise ValueError
             tuein = float(tuein)
             if tuein == -1:
                 tuetot = 0
@@ -89,7 +97,8 @@ while True:
                 break
                             
             tueout = input('TUE TIMEOUT ')
-            assert len(tueout) == 4
+            if len(tueout) != 4:
+                raise ValueError
             tueout = float(tueout)
             # Tuesday total hours
             tuetot = miladec(tueout) - miladec(tuein)
@@ -101,7 +110,9 @@ while True:
         # Wednesday
         while True:
             wedin = input('WED TIMEIN ')
-            assert len(wedin) == 4
+            # input validation: 4 chars or sentinel only 
+            if len(wedin) != 4 and wedin not in(-1, -2):
+                raise ValueError
             wedin = float(wedin)
             if wedin == -1:
                 wedtot = 0
@@ -111,7 +122,8 @@ while True:
                 break
                                     
             wedout = input('WED TIMEOUT ')
-            assert len(wedout) == 4
+            if len(wedout) != 4:
+                raise ValueError
             wedout = float(wedout)
             # Wednesday total hours
             wedtot = miladec(wedout) - miladec(wedin)
@@ -122,7 +134,9 @@ while True:
         # Thursday
         while True:
             thrin = input('THR TIMEIN ')
-            assert len(thrin) == 4
+            # input validation: 4 chars or sentinel only
+            if len(thrin) != 4 and thrin not in (-1, -2):
+                raise ValueError
             thrin = float(thrin)
             if thrin == -1:
                 thrtot = 0
@@ -132,7 +146,8 @@ while True:
                 break
                                             
             throut = input('THR TIMEOUT ')
-            assert len(throut) == 4
+            if len(throut) != 4:
+                raise ValueError
             throut = float(throut)
                 # Wednesday total hours
             thrtot = miladec(throut) - miladec(thrin)
@@ -141,14 +156,15 @@ while True:
             break
 
         friin = input('FRI TIMEIN ')
-        assert len(friin) == 4
+        if len(friin) != 4:
+            raise ValueError
         friin = float(friin)
         friin = miladec(friin)
 
         break
     
     except:
-       print('INCORRECT CODE!')
+       print('INCORRECT INPUT!')
        continue
 
 # monday - thursday total worked hours 
