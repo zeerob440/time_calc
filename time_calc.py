@@ -36,6 +36,11 @@ while True:
 
         # Sunday
         while True:
+            # user menu
+            print('IN MIL TIME')
+            print('-1 = 0 HRS')
+            print('-2 = 8 HRS PTO')
+            
             sunin = input('SUN TIMEIN ')
             # input validation: 4 chars or sentinel only
             if len(sunin) != 4 and sunin not in ('-1', '-2'):
