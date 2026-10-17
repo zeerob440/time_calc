@@ -30,7 +30,7 @@ def decamil(time):
     minutes = (time % 1) * 60
     return hours * 100 + minutes
 
-
+# start main program
 while True:
     try:
         # input times in military time
