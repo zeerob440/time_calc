@@ -48,6 +48,11 @@ while True:
             if len(sunin) != 4 and sunin not in ('-1', '-2'):
                 raise ValueError
             sunin = float(sunin)
+            # input validation for std military time (HHMM)
+            if sunin >= 2400 or sunin == 0000:
+                raise ValueError
+            if sunin >= 0 and sunin % 100 >= 60:
+                raise ValueError
             if sunin == -1:
                 suntot = 0
                 sunout = 2400
@@ -77,6 +82,11 @@ while True:
             if len(monin) != 4 and monin not in ('-1', '-2'):
                 raise ValueError
             monin = float(monin)
+            # input validation for std military time (HHMM)
+            if monin >= 2400 or monin == 0000:
+                raise ValueError
+            if monin >= 0 and monin % 100 >= 60:
+                raise ValueError
             if monin == -1:
                 montot = 0
                 # ensures out var are greater than in vars
@@ -108,6 +118,11 @@ while True:
             if len(tuein) != 4 and tuein not in ('-1', '-2'):
                 raise ValueError
             tuein = float(tuein)
+            # input validation for std military time (HHMM)
+            if tuein >= 2400 or tuein == 0000:
+                raise ValueError
+            if tuein >= 0 and tuein % 100 >= 60:
+                raise ValueError
             if tuein == -1:
                 tuetot = 0
                 # ensures out var are greater than in vars
@@ -139,6 +154,11 @@ while True:
             if len(wedin) != 4 and wedin not in('-1', '-2'):
                 raise ValueError
             wedin = float(wedin)
+            # input validation for std military time (HHMM)
+            if wedin >= 2400 or wedin == 0000:
+                raise ValueError
+            if wedin >= 0 and wedin % 100 >= 60:
+                raise ValueError
             if wedin == -1:
                 wedtot = 0
                 # ensures out var are greater than in vars
@@ -170,6 +190,11 @@ while True:
             if len(thrin) != 4 and thrin not in ('-1', '-2'):
                 raise ValueError
             thrin = float(thrin)
+            # input validation for std military time (HHMM)
+            if thrin >= 2400 or thrin == 0000:
+                raise ValueError
+            if thrin >= 0 and thrin % 100 >= 60:
+                raise ValueError
             if thrin == -1:
                 thrtot = 0
                 # ensures out var are greater than in vars
