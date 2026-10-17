@@ -194,6 +194,8 @@ elif rehrs <= 6:
     # convert to int for std military time readability
     worktil = int(round(worktil))
     print('CLOCKOUT ',worktil)
+
+print('PROGRAM COMPLETE')
     
 
 
