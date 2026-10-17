@@ -169,28 +169,26 @@ while True:
 
 # monday - thursday total worked hours 
 m_fhrs = suntot + montot + tuetot + wedtot + thrtot
-# print check for test
-print('hours so far', m_fhrs) 
 
 # remaining hours to work for the week
 rehrs = 40 - m_fhrs
 #print check
-print('hours rmain', rehrs)
+print('HRS REMAIN ', rehrs)
 
 if rehrs >= 6:
     fri_l = .50
     # work until this time on Friday if >= 6 hours remain
     worktil = decamil((friin + rehrs + fri_l))
+    # convert to int for std military time readability
     worktil = int(worktil)
-    print(worktil) 
-    #round
-    #print('%.2f' % worktil)
+    print('CLOCKOUT ' , worktil) 
+    
     # otherwise work until this time
 elif rehrs <= 6:
     worktil = decamil((friin + rehrs))
-    #round
-    worktil = int(worktil)
+    # convert to int for std military time readability
+    worktil = int('CLOCKOUT ', worktil)
     print(worktil)
-    #print('%.2f' % worktil)
+    
 
 
