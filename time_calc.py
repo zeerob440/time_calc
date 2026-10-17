@@ -1,12 +1,14 @@
 '''
 VERSION: Alpha 0, A weekly day shift time card calculator designed to run on desktop or a Casio fx-CG50 calculator.
-time_calc.py simplifies an annoying task I have to complete once a week. 
+time_calc.py simplifies an annoying task I have to complete once a week. This is optimized for a specif organization's business rules.
 
-FEATURES: time_calc can run on desktop or a Casio fx-CG50 calculator
+FEATURES: time_calc can run on desktop or a Casio fx-CG50 calculator| If >= 6 hrs worked It subtracts .5 hours/ 30min for lunch as per business rules.
 
-REQs: Python 3.13 OR MicroPython 1.9.4| Casio fx-CG50| Desktop computer
+REQs: Casio fx-CG50 with MicroPython 1.9.4 OR Desktop computer with Python (tested Python 3.13)
 
-Proudly Engineered by Zachary Roberts 15 OCT 2026
+ASSUMPTIONS: 40-hour target workweek| Military time input (HHMM)|  -1 = No hours worked|  -2 = 8 hours PTO| Shifts do not cross midnight
+
+Proudly Engineered by Zachary Roberts 16 OCT 2026
 
 "A watched clock never ticks."
 '''
