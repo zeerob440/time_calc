@@ -40,7 +40,7 @@ while True:
             print('IN MIL TIME')
             print('-1 = 0 HRS')
             print('-2 = 8 HRS PTO')
-            
+
             sunin = input('SUN TIMEIN ')
             # input validation: 4 chars or sentinel only
             if len(sunin) != 4 and sunin not in ('-1', '-2'):
@@ -185,14 +185,14 @@ if rehrs >= 6:
     # work until this time on Friday if >= 6 hours remain
     worktil = decamil((friin + rehrs + fri_l))
     # convert to int for std military time readability
-    worktil = int(worktil)
+    worktil = int(round(worktil))
     print('CLOCKOUT ' , worktil) 
     
     # otherwise work until this time
 elif rehrs <= 6:
     worktil = decamil((friin + rehrs))
     # convert to int for std military time readability
-    worktil = int(worktil)
+    worktil = int(round(worktil))
     print('CLOCKOUT ',worktil)
     
 
