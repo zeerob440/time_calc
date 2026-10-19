@@ -1,5 +1,5 @@
 '''
-VERSION: Alpha 0, A weekly day shift time card calculator designed to run on desktop or a Casio fx-CG50 calculator.
+VERSION: Alpha, A weekly day shift time card calculator designed to run on desktop or a Casio fx-CG50 calculator.
 time_calc.py simplifies an annoying task I have to complete once a week. This is optimized for a specif organization's business rules.
 
 FEATURES: time_calc can run on desktop or a Casio fx-CG50 calculator| If >= 6 hrs worked It subtracts .5 hours/ 30min for lunch as per business rules.
