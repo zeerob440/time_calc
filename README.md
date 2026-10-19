@@ -26,9 +26,9 @@ time_calc.py allows the user to calculate remaining hours to be worked on Friday
         - Windows 10 or better (tested)
         - 8892 bytes of storage
 
-- Desktop Installation Process: 
-    1. Download latest Python interpreter
-    2. Clone Repository at ![HERE] (https://github.com/zeerob440/standard_documentation)
+    - Desktop Installation Process: 
+        1. Download latest Python interpreter
+        2. Clone Repository at [REPO] (https://github.com/zeerob440/standard_documentation)
 
 2. Casio fx-CG50 calculator
     - System Reqs:
@@ -36,8 +36,12 @@ time_calc.py allows the user to calculate remaining hours to be worked on Friday
         - fx-CG50 Calculator OR fx-CG50 emulator
         - 8892 bytes of storage
 
-- Casio fx-CG50 Emulator Installation Process:
-    
+    - Casio fx-CG50 Emulator Installation Process:
+        1. Download fx-CG50 Emulator [EMULATOR] (https://edu.casio.com/intl/software/emulators/product/fxcgm_plus/)
+        2. Open fx-CG50 Application. 
+        3. Select "Memory"
+        
+
     
 
 - EXPLAIN HOW TO INSTALL
