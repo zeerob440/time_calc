@@ -40,7 +40,10 @@ time_calc.py allows the user to calculate remaining hours to be worked on Friday
         1. Download fx-CG50 Emulator [EMULATOR] (https://edu.casio.com/intl/software/emulators/product/fxcgm_plus/)
         2. Open fx-CG50 Application.
         3. ![Step 1](doc_images/em_mm0r.png)
-        4. ![Step 2](doc_images/em_f1r.png)
+        4. ![Step 2](doc_images/em2r.png)
+        5. ![Step 3](doc_images/em_f1r.png)
+        6. ![Step 4](doc_images/em_selfile4r.png)
+        7. ![Step 5](doc_images/em_sav5r.png)
 
         
 
