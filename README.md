@@ -6,7 +6,7 @@
 |ENGINEER(S)    |       Zachary Roberts                |
 |DATE INITIATED |    16 OCT 2026                 |
 |DATE ACCEPTED  | 19 OCT 2026       |
-|LANGUAGE(S)    |        MicroPython  1.94              |
+|LANGUAGE(S)    |        MicroPython  1.9.4              |
 |TARGET ENVIRONMENT|       Widows machine, Casio fx-CG50 Calculator             |
 |DEVELOPMENT STATUS| REQUIREMENTS DESIGN IMPLEMENTATION TESTING (MAINTENANCE)|
 
@@ -63,6 +63,7 @@ The user input their clock in and clock out times for each prompted day. After t
 ### 1D REFERENCE MANUAL
 
 
+
 ### 1E SYSTEM ADMINISTRATORS MANUAL
 
 NOT APPLICABLE. SYSTEM GOVERNANCE IS DEFINED BY ADMINISTRATOR'S ORGANIZATION BUSINESS RULES.
@@ -85,7 +86,7 @@ time_calc.py is a single file program that contains three functions. These funct
 time_calc/
 ├── README.md
 ├── time_calc.py
-└── doc_images/
+└── doc_images/ # image files for README.md go in this directory.
     ├── em_fr1r.png
     ├── em_mm0r.png
     ├── em_sav5r.png
