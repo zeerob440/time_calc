@@ -77,7 +77,8 @@ None
 ### 2B SYSTEM ARCHITECTURE MANUAL
 
 #### DESCRIPTION
-Plain text description here.
+
+time_calc.py is a single file program that contains three functions. These functions work to take standard military time such as 0445, converts it to decimal 4.75. If greater than or equal to 6 hours are worked it subtracts .50 hours for lunch. Lastly, the clock out time on Friday is converted from decimal back to HHMM such as 1630.
 
 #### DIRECTORY ARCHITECTURE
 
@@ -103,7 +104,9 @@ time_calc/
 
 |UNIT|FUNCTIONAL DESCRIPTION                                                                                                  |
 |:-------------|:-------------------------------------------------------------------------------------------------------------|
-|example(num)|example(num) takes and integer argument and returns an example.|
+|decamil(time)|Expects a float arg as decimal military tine, converts it to  an int and returns standard military time|
+|miladec(time)| Takes an int as standard military time like 1630 and converts it to decimal military time (16.50) returns decimal military time|
+|lunch(mthirty)| Expects a float arg, decrements .50 if float is >= 6.0 returns decremented value.|
 
 ### 2D REQUIREMENTS SPECIFICATION & TEST MANUAL
 

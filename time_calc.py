@@ -19,12 +19,12 @@ def miladec(time):
     time = (time // 100) + (time % 100) / 60
     return time
 
-# decrement -= .50 time for days worked >= 6 hours
+# decrements -= .50 time for days worked >= 6 hours
 def lunch(mthirty):
     mthirty -= .50
     return mthirty
 
-# convert decimal military time to standard military time
+# converts decimal military time to standard military time
 def decamil(time):
     hours = int(time)
     minutes = (time % 1) * 60
