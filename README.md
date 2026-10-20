@@ -82,7 +82,7 @@ NOT APPLICABLE. SYSTEM GOVERNANCE IS DEFINED BY ADMINISTRATOR'S ORGANIZATION BUS
 
 MicroPython 1.4.9 as implemented on a Casio fx-CG50 calculator is a little quirky and does not behave like Python on a desktop. For instance:
 - formated strings are not supported.
-- var names >= to 8 chars are not supported.
+- declarations >= to 8 chars are not supported.
 - viewport is on 22x7 chars.
 
 ### 2B SYSTEM ARCHITECTURE MANUAL
@@ -116,7 +116,7 @@ time_calc/
 
 |UNIT|FUNCTIONAL DESCRIPTION                                                                                                  |
 |:-------------|:-------------------------------------------------------------------------------------------------------------|
-|decamil(time)|Expects a float arg as decimal military tine, converts it to  an int and returns standard military time|
+|decamil(time)|Expects a float arg as decimal military time, converts it to  an int and returns standard military time|
 |miladec(time)| Takes an int as standard military time like 1630 and converts it to decimal military time (16.50) returns decimal military time|
 |lunch(mthirty)| Expects a float arg, decrements .50 if float is >= 6.0 returns decremented value.|
 
