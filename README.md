@@ -62,6 +62,12 @@ The user input their clock in and clock out times for each prompted day. After t
 
 ### 1D REFERENCE MANUAL
 
+1. ![Step 1](doc_images/menu1r.png)
+2. ![Step 2](doc_images/access0r.png)
+3. ![Step 3](doc_images/tcm2r.png)
+4. ![Step 4](doc_images/t_outr.png)
+5. ![Step 5](doc_images/endpr.png)
+
 
 
 ### 1E SYSTEM ADMINISTRATORS MANUAL
@@ -79,6 +85,7 @@ None
 #### DESCRIPTION
 
 time_calc.py is a single file program that contains three functions. These functions work to take standard military time such as 0445, converts it to decimal 4.75. If greater than or equal to 6 hours are worked it subtracts .50 hours for lunch. Lastly, the clock out time on Friday is converted from decimal back to HHMM such as 1630.
+
 
 #### DIRECTORY ARCHITECTURE
 
