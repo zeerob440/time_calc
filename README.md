@@ -78,17 +78,14 @@ Plain text description here.
 #### DIRECTORY ARCHITECTURE
 
 ```text
-example_project_name/
+time_calc/
 ├── README.md
-├── docs/
-│   ├── installation_manual.md
-│   ├── user_manual.md
-│   └── system_manual.md
-├── src/
-│   ├── main.py
-│   └── utilities.py
-└── tests/
-    └── test_main.py
+└── doc_images/
+    ├── em_fr1r.png
+    ├── em_mm0r.png
+    ├── em_sav5r.png
+    ├── em_selfile4r.png
+    └── em_2r.png
 ```
 
 ### 2C SYSTEM DECOMPOSITION MANUAL
