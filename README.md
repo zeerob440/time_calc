@@ -38,8 +38,10 @@ time_calc.py allows the user to calculate remaining hours to be worked on Friday
 
     - Casio fx-CG50 Emulator Installation Process:
         1. Download fx-CG50 Emulator [EMULATOR] (https://edu.casio.com/intl/software/emulators/product/fxcgm_plus/)
-        2. Open fx-CG50 Application. 
+        2. Open fx-CG50 Application.
         3. Select "Memory".
+        (doc_images/em_mm0r.png)
+
         
 
     
