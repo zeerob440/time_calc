@@ -18,6 +18,8 @@
 
 time_calc.py allows the user to calculate remaining hours to be worked on Fridays at a specific organization. It follows business rules at the organization in question such as deducting .50 hours for lunch if greater than or equal to 6 hours have been worked and assumes a 40-hour work week. It does not allow for Saturday inputs or overnight shifts as they are not applicable for this very specific use case.
 
+The user inputs their clockings Sun-Fri, the program prints how many hours must be worked on Friday, and when the user can clockout.
+
 ### 1B INSTALLATION MANUAL
 
 1. **Desktop:**
@@ -78,7 +80,10 @@ NOT APPLICABLE. SYSTEM GOVERNANCE IS DEFINED BY ADMINISTRATOR'S ORGANIZATION BUS
 
 ### 2A SYSTEM DEPENDENCIES MANUAL
 
-None
+MicroPython 1.4.9 as implemented on a Casio fx-CG50 calculator is a little quirky and does not behave like Python on a desktop. For instance:
+- formated strings are not supported.
+- var names >= to 8 chars are not supported.
+- viewport is on 22x7 chars.
 
 ### 2B SYSTEM ARCHITECTURE MANUAL
 
