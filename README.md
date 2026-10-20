@@ -28,7 +28,7 @@ time_calc.py allows the user to calculate remaining hours to be worked on Friday
 
     - Desktop Installation Process: 
         1. Download latest Python interpreter
-        2. Clone Repository at [REPO] (https://github.com/zeerob440/standard_documentation)
+        2. Clone Repository at [REPO] (https://github.com/zeerob440/time_calc)
 
 2. **Casio fx-CG50 calculator**
     - System Reqs:
