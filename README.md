@@ -56,12 +56,11 @@ time_calc.py allows the user to calculate remaining hours to be worked on Friday
 
 ### 1C INTRODUCTORY MANUAL
 
-- EXPLAIN HOW TO USE SYSTEM IN SIMPLE TERMS
-- USE ANNOTATED SCREEN SHOTS
+Before using the system it is important to understand the scope of the software. time_calc only accepts HHMM military time, -1 for 0 hours, and - 2 for 8 hours of PTO.
+
+The user input their clock in and clock out times for each prompted day. After the friday clock in time is completed, the program prints how many hours remain and when the user's clockout time is in standard military time such as 1332.
 
 ### 1D REFERENCE MANUAL
-
-Before using the system it is important to understand the scope of the software. time_calc only accepts HHMM military time, -1 for 0 hours, and - 2 for 8 hours of PTO.
 
 
 ### 1E SYSTEM ADMINISTRATORS MANUAL
@@ -112,4 +111,4 @@ time_calc/
 
 |REQUIREMENT SPECIFICATION|TEST NAME|TEST SPECIFICATION                         |FUNCTIONS AS DESIGNED DATE|
 |:------------------------|:--------|:------------------------------------------|:-------------------------|
-|The system only accepts military time.| T1 MILTIME| Test all inputs for miltime with invalid entries.| 26 APR 1979|
+|The system accepts military time (2242).| T1 MILTIME| Test all inputs for miltime with invalid entries.| 19 OCT 2026|
