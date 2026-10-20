@@ -20,7 +20,7 @@ time_calc.py allows the user to calculate remaining hours to be worked on Friday
 
 ### 1B INSTALLATION MANUAL
 
-1. Desktop:
+1. **Desktop:**
     -  System Reqs:
         - Python 3.13 (tested)
         - Windows 10 or better (tested)
@@ -30,13 +30,13 @@ time_calc.py allows the user to calculate remaining hours to be worked on Friday
         1. Download latest Python interpreter
         2. Clone Repository at [REPO] (https://github.com/zeerob440/standard_documentation)
 
-2. Casio fx-CG50 calculator
+2. **Casio fx-CG50 calculator**
     - System Reqs:
         - MicroPython 1.9.4
         - fx-CG50 Calculator OR fx-CG50 emulator
         - 8892 bytes of storage
 
-    - Casio fx-CG50 Emulator Installation Process:
+    - **Casio fx-CG50 Emulator Installation Process:**
         1. Download fx-CG50 Emulator [EMULATOR] (https://edu.casio.com/intl/software/emulators/product/fxcgm_plus/)
         2. Open fx-CG50 desktop application.
         3. ![Step 3](doc_images/em_mm0r.png)
@@ -45,7 +45,7 @@ time_calc.py allows the user to calculate remaining hours to be worked on Friday
         6. ![Step 6](doc_images/em_selfile4r.png)
         7. ![Step 7](doc_images/em_sav5r.png)
 
-    - Casio fx-CG50 Installation Process
+    - **Casio fx-CG50 Installation Process**
         1. Power on the calculator.
         2. ![Step 2](doc_images/cabf1.jpg)
         3. ![Step 3](doc_images/cng.png)
@@ -60,7 +60,8 @@ time_calc.py allows the user to calculate remaining hours to be worked on Friday
 - USE ANNOTATED SCREEN SHOTS
 
 ### 1D REFERENCE MANUAL
-- DESCRIBE ALL SYSTEM FACULTIES TO USER AND HOW TO USE THEM
+
+Before using the system it is important to understand the scope of the software. time_calc only accepts HHMM military time, -1 for 0 hours, and - 2 for 8 hours of PTO.
 
 
 ### 1E SYSTEM ADMINISTRATORS MANUAL
@@ -70,7 +71,8 @@ NOT APPLICABLE. SYSTEM GOVERNANCE IS DEFINED BY ADMINISTRATOR'S ORGANIZATION BUS
 ## 2 SYSTEM DOCUMENTATION
 
 ### 2A SYSTEM DEPENDENCIES MANUAL
- - LIST DEPENDENCIES 
+
+None
 
 ### 2B SYSTEM ARCHITECTURE MANUAL
 
@@ -95,7 +97,7 @@ time_calc/
 
 | PROGRAM       | PURPOSE              | FUNCTIONS                | CLASSES      | LIBRARIES             |
 |:-------------|:---------------------|:--------------------------|:------------|:----------------------|
-|example.py|Provides examples for documentation.| examples(num), lookup()| Examples, Nav| hashlib, math|
+|time_calc.py|Takes HHMM input, returns time of clock out on Friday| decamil(time), miladec(time), lunch(mthirty)| NONE| NONE|
 
 #### UNIT DESCRIPTION MANUAL
 
