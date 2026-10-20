@@ -119,4 +119,7 @@ time_calc/
 
 |REQUIREMENT SPECIFICATION|TEST NAME|TEST SPECIFICATION                         |FUNCTIONS AS DESIGNED DATE|
 |:------------------------|:--------|:------------------------------------------|:-------------------------|
-|The system accepts military time (2242).| T1 MILTIME| Test all inputs for miltime with invalid entries.| 19 OCT 2026|
+|The system accepts military time (2242).| T1 MILTIME IN| Test all inputs for miltime with invalid entries.| 19 OCT 2026|
+|The system must account for PTO and 0 hours worked| T2| -1, -2 sentinels tested in all input states| 19 OCT 2026|
+|The system must deduct .50 hours of time worked for any shift >= 6 hrs| T3 NO FREE LUNCH| lunch(mthirty) tested on all input prompts| 19 OCT 2026|
+|The system must return Friday clockout as HHMM (1642)| T4 MILTIME OUT| tested on several output cases| 19 OCT 2026 |
