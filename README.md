@@ -91,9 +91,15 @@ MicroPython 1.4.9 as implemented on a Casio fx-CG50 calculator is constrained an
 
 time_calc.py is a single file program that contains three functions. These functions work to take standard military time such as 0445, converts it to decimal 4.75 time whereby this value is used to calculate hours worked. If greater than or equal to 6 hours are worked it subtracts .50 hours for lunch. Lastly, the clock out time on Friday is converted from decimal back to HHMM such as 1630.
 
+The user inputs clock in and clock out times Sunday-Thursday. On Friday the user only inputs clock in times. Once that is complete the program calculates the clock out time on Friday and prints it.
+
 **time_calc Input Architecture**
 
 ![Input Architecture](doc_images/time_calc_input_process.drawio.svg)
+
+**time_calc Output Architecture**
+
+![Output Architecture](doc_images/time_calc_output.drawio.svg)
 
 
 #### DIRECTORY ARCHITECTURE
