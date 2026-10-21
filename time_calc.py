@@ -70,6 +70,9 @@ while True:
             # no overnight exception
             if sunout <= sunin:
                 raise ValueError
+            # standard military time only HHMM
+            if sunout % 100 >= 60:
+                raise ValueError
             # sunday total hours
             suntot = miladec(sunout) - miladec(sunin)
             if suntot >= 6:
@@ -105,6 +108,9 @@ while True:
             monout = float(monout)
             # no overnight exception
             if monout <= monin:
+                raise ValueError
+            # standard military time only HHMM
+            if monout % 100 >= 60:
                 raise ValueError
             # monday total hours
             montot = miladec(monout) - miladec(monin)
@@ -142,6 +148,9 @@ while True:
             # no overnight exception
             if tueout <= tuein:
                 raise ValueError
+            # standard military time only HHMM
+            if tueout % 100 >= 60:
+                raise ValueError
             # Tuesday total hours
             tuetot = miladec(tueout) - miladec(tuein)
             if tuetot >= 6:
@@ -177,6 +186,9 @@ while True:
             wedout = float(wedout)
             # no overnight exception
             if wedout <= wedin:
+                raise ValueError
+            # standard military time only HHMM
+            if wedout % 100 >= 60:
                 raise ValueError
             # Wednesday total hours
             wedtot = miladec(wedout) - miladec(wedin)
@@ -214,7 +226,10 @@ while True:
             # no overnight exception
             if throut <= thrin:
                 raise ValueError
-                # thurssday total hours
+            # standard military time only HHMM
+            if sunout % 100 >= 60:
+                raise ValueError
+                # thursday total hours
             thrtot = miladec(throut) - miladec(thrin)
             if thrtot >= 6:
                     thrtot = lunch(thrtot)
@@ -222,6 +237,9 @@ while True:
 
         friin = input('FRI TIMEIN ')
         if len(friin) != 4:
+            raise ValueError
+        # standard military time only HHMM
+        if friin % 100 >= 60:
             raise ValueError
         friin = float(friin)
         friin = miladec(friin)
