@@ -227,7 +227,7 @@ while True:
             if throut <= thrin:
                 raise ValueError
             # standard military time only HHMM
-            if sunout % 100 >= 60:
+            if throut % 100 >= 60:
                 raise ValueError
                 # thursday total hours
             thrtot = miladec(throut) - miladec(thrin)
