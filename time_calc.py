@@ -225,7 +225,6 @@ while True:
             raise ValueError
         friin = float(friin)
         friin = miladec(friin)
-
         break
     
     except:

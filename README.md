@@ -18,7 +18,7 @@
 
 time_calc.py allows the user to calculate remaining hours to be worked on Fridays at a specific organization. It follows business rules at the organization in question such as deducting .50 hours for lunch if greater than or equal to 6 hours have been worked and assumes a 40-hour work week. It does not allow for Saturday inputs or overnight shifts as they are not applicable for this very specific use case.
 
-The user inputs their clockings Sun-Fri, the program prints how many hours must be worked on Friday, and when the user can clockout.
+The user inputs their clockings Sun-Fri, the program prints how many hours must be worked on Friday, and when the user can clock out.
 
 ### 1B INSTALLATION MANUAL
 
@@ -60,7 +60,7 @@ The user inputs their clockings Sun-Fri, the program prints how many hours must 
 
 Before using the system it is important to understand the scope of the software. time_calc only accepts HHMM military time, -1 for 0 hours, and - 2 for 8 hours of PTO.
 
-The user input their clock in and clock out times for each prompted day. After the friday clock in time is completed, the program prints how many hours remain and when the user's clockout time is in standard military time such as 1332.
+The user inputs their clock in and clock out times for each prompted day. After the Friday clock in time is completed, the program prints how many hours remain and when the user's clock out time on Friday is in standard military time such as 1332.
 
 ### 1D REFERENCE MANUAL
 
@@ -80,16 +80,20 @@ NOT APPLICABLE. SYSTEM GOVERNANCE IS DEFINED BY ADMINISTRATOR'S ORGANIZATION BUS
 
 ### 2A SYSTEM DEPENDENCIES MANUAL
 
-MicroPython 1.4.9 as implemented on a Casio fx-CG50 calculator is a little quirky and does not behave like Python on a desktop. For instance:
-- formated strings are not supported.
-- declarations >= to 8 chars are not supported.
-- viewport is on 22x7 chars.
+MicroPython 1.4.9 as implemented on a Casio fx-CG50 calculator is constrained and does not behave like Python on a desktop. For instance:
+- Formatted strings are not supported.
+- Declarations >= to 8 chars are not supported.
+- Viewport is only 22x7 character spaces.
 
 ### 2B SYSTEM ARCHITECTURE MANUAL
 
 #### DESCRIPTION
 
-time_calc.py is a single file program that contains three functions. These functions work to take standard military time such as 0445, converts it to decimal 4.75. If greater than or equal to 6 hours are worked it subtracts .50 hours for lunch. Lastly, the clock out time on Friday is converted from decimal back to HHMM such as 1630.
+time_calc.py is a single file program that contains three functions. These functions work to take standard military time such as 0445, converts it to decimal 4.75 time whereby this value is used to calculate hours worked. If greater than or equal to 6 hours are worked it subtracts .50 hours for lunch. Lastly, the clock out time on Friday is converted from decimal back to HHMM such as 1630.
+
+**time_calc Input Architecture**
+
+![Input Architecture](doc_images/time_calc_input_process.drawio.svg)
 
 
 #### DIRECTORY ARCHITECTURE
@@ -97,6 +101,9 @@ time_calc.py is a single file program that contains three functions. These funct
 ```text
 time_calc/
 ├── README.md
+├── __pycache__
+|   ├── test.cpython-313.pyc
+|   └── time_calc.cpython-313.pyc
 ├── time_calc.py
 └── doc_images/ # image files for README.md go in this directory.
     ├── em_fr1r.png
