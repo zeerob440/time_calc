@@ -5,7 +5,7 @@
 |VERSION        |        Alpha               |
 |ENGINEER(S)    |       Zachary Roberts                |
 |DATE INITIATED |    16 OCT 2026                 |
-|DATE ACCEPTED  | 19 OCT 2026       |
+|DATE ACCEPTED  | 21 OCT 2026       |
 |LANGUAGE(S)    |        MicroPython  1.9.4              |
 |TARGET ENVIRONMENT|       Widows machine, Casio fx-CG50 Calculator             |
 |DEVELOPMENT STATUS| REQUIREMENTS DESIGN IMPLEMENTATION TESTING (MAINTENANCE)|
@@ -26,7 +26,7 @@ The user inputs their clockings Sun-Fri, the program prints how many hours must 
     -  System Reqs:
         - Python 3.13 (tested)
         - Windows 10 or better (tested)
-        - 8892 bytes of storage
+        - 9584 bytes of storage
 
     - Desktop Installation Process: 
         1. Download latest Python interpreter
@@ -36,7 +36,7 @@ The user inputs their clockings Sun-Fri, the program prints how many hours must 
     - System Reqs:
         - MicroPython 1.9.4
         - fx-CG50 Calculator OR fx-CG50 emulator
-        - 8892 bytes of storage
+        - 9584 bytes of storage
 
     - **Casio fx-CG50 Emulator Installation Process:**
         1. Download fx-CG50 Emulator [EMULATOR] (https://edu.casio.com/intl/software/emulators/product/fxcgm_plus/)
@@ -95,7 +95,7 @@ The user inputs clock in and clock out times Sunday-Thursday. On Friday the user
 
 **time_calc Input Architecture**
 
-![Input Architecture](doc_images/time_calc_input_process.drawio.svg)
+![Input Architecture](doc_images/time_calc_input_processr.drawio.svg)
 
 **time_calc Output Architecture**
 
@@ -137,7 +137,7 @@ time_calc/
 
 |REQUIREMENT SPECIFICATION|TEST NAME|TEST SPECIFICATION                         |FUNCTIONS AS DESIGNED DATE|
 |:------------------------|:--------|:------------------------------------------|:-------------------------|
-|The system accepts military time (2242).| T1 MILTIME IN| Test all inputs for miltime with invalid entries.| 19 OCT 2026|
+|The system accepts military time (2242).| T1 MILTIME IN| Test all inputs for miltime with invalid entries.| 21 OCT 2026|
 |The system must account for PTO and 0 hours worked| T2| -1, -2 sentinels tested in all input states| 19 OCT 2026|
 |The system must deduct .50 hours of time worked for any shift >= 6 hrs| T3 NO FREE LUNCH| lunch(mthirty) tested on all input prompts| 19 OCT 2026|
 |The system must return Friday clockout as HHMM (1642)| T4 MILTIME OUT| tested on several output cases| 19 OCT 2026 |
