@@ -238,10 +238,10 @@ while True:
         friin = input('FRI TIMEIN ')
         if len(friin) != 4:
             raise ValueError
+        friin = float(friin)
         # standard military time only HHMM
         if friin % 100 >= 60:
             raise ValueError
-        friin = float(friin)
         friin = miladec(friin)
         break
     
