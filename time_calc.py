@@ -260,6 +260,7 @@ print('HRS REMAIN %.2f' % rehrs)
 if rehrs >= 6:
     fri_l = .50
     # work until this time on Friday if >= 6 hours remain
+    print('HRS REMAIN %.2f' % rehrs + fri_l)
     worktil = decamil((friin + rehrs + fri_l))
     # convert to int for std military time readability
     worktil = int(round(worktil))
@@ -267,6 +268,7 @@ if rehrs >= 6:
     
     # otherwise work until this time
 elif rehrs <= 6:
+    print(('HRS REMAIN %.2f' % rehrs))
     worktil = decamil((friin + rehrs))
     # convert to int for std military time readability
     worktil = int(round(worktil))
