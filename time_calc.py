@@ -269,10 +269,9 @@ print('HRS REMAIN %.2f' % rehrs)
 if rehrs >= 6:
     fri_l = .50
     # add lunch to remaing hours to be worked
-    # work until this time on Friday if >= 6 hours remain
     f_lunch = rehrs + fri_l
-    print('hours remain flunch', f_lunch)
-    print('HRS REMAIN %.2f' % rehrs)
+    print('hours remain flunch %.2f', f_lunch)
+    # work until this time on Friday if >= 6 hours remain
     worktil = decamil((friin + rehrs + fri_l))
     # convert to int for std military time readability
     worktil = int(round(worktil))
