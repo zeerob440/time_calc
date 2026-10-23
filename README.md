@@ -99,7 +99,7 @@ The user inputs clock in and clock out times Sunday-Thursday. On Friday the user
 
 **time_calc Output Architecture**
 
-![Output Architecture](doc_images/time_calc_output.drawio.svg)
+![Output Architecture](doc_images/time_calc_outputr.drawio.svg)
 
 
 #### DIRECTORY ARCHITECTURE
