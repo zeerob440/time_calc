@@ -249,9 +249,18 @@ while True:
        print('INCORRECT INPUT!')
        continue
 
-# monday - thursday total worked hours 
+# monday - thursday total worked hours
+# FIXME: Calcultions incorrect 
+print('sutot', suntot)
+print('montot', montot)
+print('tuetot', tuetot)
+print('wedtot', wedtot)
+print('thrtot', thrtot)
+
 m_fhrs = suntot + montot + tuetot + wedtot + thrtot
 
+# FIXME remove print check once debugging is complete
+print(m_fhrs)
 # remaining hours to work for the week
 rehrs = 40 - m_fhrs
 #print check
@@ -259,8 +268,10 @@ print('HRS REMAIN %.2f' % rehrs)
 
 if rehrs >= 6:
     fri_l = .50
+    # add lunch to remaing hours to be worked
     # work until this time on Friday if >= 6 hours remain
-    print('HRS REMAIN %.2f' % rehrs + fri_l)
+    rehrs = rehrs + fri_l
+    print('HRS REMAIN %.2f' % rehrs)
     worktil = decamil((friin + rehrs + fri_l))
     # convert to int for std military time readability
     worktil = int(round(worktil))
