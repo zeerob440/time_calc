@@ -26,7 +26,7 @@ The user inputs their clockings Sun-Fri, the program prints how many hours must 
     -  System Reqs:
         - Python 3.13 (tested)
         - Windows 10 or better (tested)
-        - 9584 bytes of storage
+        - 9722 bytes of storage
 
     - Desktop Installation Process: 
         1. Download latest Python interpreter
@@ -36,7 +36,7 @@ The user inputs their clockings Sun-Fri, the program prints how many hours must 
     - System Reqs:
         - MicroPython 1.9.4
         - fx-CG50 Calculator OR fx-CG50 emulator
-        - 9584 bytes of storage
+        - 9722 bytes of storage
 
     - **Casio fx-CG50 Emulator Installation Process:**
         1. Download fx-CG50 Emulator [EMULATOR] (https://edu.casio.com/intl/software/emulators/product/fxcgm_plus/)
