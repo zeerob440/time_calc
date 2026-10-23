@@ -250,27 +250,17 @@ while True:
        continue
 
 # monday - thursday total worked hours
-# FIXME: Calcultions incorrect 
-print('sutot', suntot)
-print('montot', montot)
-print('tuetot', tuetot)
-print('wedtot', wedtot)
-print('thrtot', thrtot)
 
-m_fhrs = suntot + montot + tuetot + wedtot + thrtot
-
-# FIXME remove print check once debugging is complete
-print(m_fhrs)
+m_thrs = suntot + montot + tuetot + wedtot + thrtot
 # remaining hours to work for the week
-rehrs = 40 - m_fhrs
-#print check
-print('HRS REMAIN %.2f' % rehrs)
+rehrs = 40 - m_thrs
 
 if rehrs >= 6:
+    # add to clockout time
     fri_l = .50
     # add lunch to remaing hours to be worked
     f_lunch = rehrs + fri_l
-    print('hours remain flunch %.2f' % f_lunch)
+    print('HOURS REMAIN %.2f' % f_lunch)
     # work until this time on Friday if >= 6 hours remain
     worktil = decamil((friin + rehrs + fri_l))
     # convert to int for std military time readability
@@ -283,7 +273,7 @@ elif rehrs <= 6:
     worktil = decamil((friin + rehrs))
     # convert to int for std military time readability
     worktil = int(round(worktil))
-    print('CLOCKOUT ',worktil)
+    print('CLOCKOUT ', worktil)
 
 print('PROGRAM COMPLETE')
     
